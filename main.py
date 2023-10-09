@@ -15,7 +15,7 @@ if __name__ == "__main__":
     with open('config.json', encoding='utf8') as configFile:
         config = json.loads(configFile.read())
     setSchedule(config)
-    backup.main()
+    backup.main(config)
     while True:
         schedule.run_pending()
         time.sleep(1)
